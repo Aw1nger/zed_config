@@ -1,0 +1,38 @@
+[
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::SwitchToNormalMode",
+      "alt-space": "editor::ShowCompletions"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space f": "file_finder::Toggle",
+      "space e": "project_panel::ToggleFocus",
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem",
+      ";": "command_palette::Toggle",
+      "alt-enter": "editor::ToggleCodeActions"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrevious",
+      "enter": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "d": "project_panel::Delete",
+      "y": "project_panel::Copy",
+      "x": "project_panel::Cut",
+      "p": "project_panel::Paste"
+    }
+  }
+]
